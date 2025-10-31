@@ -4,6 +4,9 @@ import br.com.hugoflix.dominio.Episodio;
 import br.com.hugoflix.dominio.Filme;
 import br.com.hugoflix.dominio.Serie;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class MainTeste {
     public static void main(String[] args) {
         Recomendacao filtro = new Recomendacao ();
@@ -16,7 +19,7 @@ public class MainTeste {
         mrRobots.setDataLancamento(1999);
         mrRobots.imprimeDetalhesSerie();
         filtro.filtra(mrRobots);
-        System.out.println("-------------------");
+        System.out.println();
 
         Filme truqueDeMestre = new Filme("Diretora Maria Rita");
         truqueDeMestre.setNomeTitulo("TruqueDeMestre");
@@ -27,11 +30,17 @@ public class MainTeste {
         truqueDeMestre.imprimeDetalhesFilme();
         filtro.filtra(truqueDeMestre);
 
-        Episodio epSerie = new Episodio();
+        var epSerie = new Episodio();
         epSerie.setSerie(mrRobots);
         epSerie.setTotalVisualizacoes(4000);
         epSerie.setNumero(34);
         filtro.filtra(epSerie);
+
+        System.out.println("trabalhando com ArrayList");
+        ArrayList<Filme> listaFilmes = new ArrayList<>();
+        listaFilmes.add(truqueDeMestre);
+        System.out.printf(listaFilmes.get(0).getNomeTitulo() + "\n");
+        System.out.println(listaFilmes);
 
 
 

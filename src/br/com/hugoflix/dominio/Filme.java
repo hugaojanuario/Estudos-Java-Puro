@@ -28,4 +28,10 @@ public class Filme extends Titulo implements Classificavel {
     public void setNomeDiretor(String nomeDiretor) {
         this.nomeDiretor = nomeDiretor;
     }
+
+
+    @Override
+    public String toString() {
+        return "Filme: " + this.getNomeTitulo();
+    }
 }
