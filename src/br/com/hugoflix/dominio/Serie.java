@@ -7,12 +7,18 @@ public class Serie extends Titulo implements Classificavel {
     private int episodio;
     private String nomeEposiodio;
 
-
-    public Serie(int temporada, int episodio, String nomeEposiodio) {
+    public Serie(String nomeTitulo, int dataLancamento, int temporada, int episodio, String nomeEposiodio) {
+        super(nomeTitulo, dataLancamento);
         this.temporada = temporada;
         this.episodio = episodio;
         this.nomeEposiodio = nomeEposiodio;
     }
+
+//    public Serie(int temporada, int episodio, String nomeEposiodio) {
+//        this.temporada = temporada;
+//        this.episodio = episodio;
+//        this.nomeEposiodio = nomeEposiodio;
+//    }
 
     public void imprimeDetalhesSerie(){
         System.out.println("---DETALHES SERIE---");

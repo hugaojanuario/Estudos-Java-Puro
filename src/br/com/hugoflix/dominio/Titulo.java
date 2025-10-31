@@ -7,7 +7,10 @@ public class Titulo {
     private int totalAvaliacao;
     private double mediaAvaliacao;
 
-
+    public Titulo(String nomeTitulo, int dataLancamento) {
+        this.nomeTitulo = nomeTitulo;
+        this.dataLancamento = dataLancamento;
+    }
 //    public Titulo(String nomeTitulo, int dataLancamento) {
 //        this.nomeTitulo = nomeTitulo;
 //        this.dataLancamento = dataLancamento;

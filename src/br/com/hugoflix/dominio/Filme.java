@@ -5,14 +5,15 @@ import br.com.hugoflix.calculos.Classificavel;
 public class Filme extends Titulo implements Classificavel {
     private String nomeDiretor;
 
+    public Filme(String nomeTitulo, int dataLancamento, String nomeDiretor) {
+        super(nomeTitulo, dataLancamento);
+        this.nomeDiretor = nomeDiretor;
+    }
     @Override
     public double getClassificacao() {
             return 0;
     }
 
-    public Filme(String nomeDiretor) {
-        this.nomeDiretor = nomeDiretor;
-    }
 
     public void imprimeDetalhesFilme(){
         System.out.println("---DETALHES FILME---");

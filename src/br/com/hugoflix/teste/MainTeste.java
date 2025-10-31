@@ -11,19 +11,15 @@ public class MainTeste {
     public static void main(String[] args) {
         Recomendacao filtro = new Recomendacao ();
 
-        Serie mrRobots = new Serie(7,18,"A volta dos que não foram");
-        mrRobots.setNomeTitulo("MrRobots");
+        Serie mrRobots = new Serie("MrRobots", 1999,5,78,"a volta dos que nao foram");
         mrRobots.avalia(10.0);
         mrRobots.avalia(9.4);
         mrRobots.avalia(3.0);
-        mrRobots.setDataLancamento(1999);
         mrRobots.imprimeDetalhesSerie();
         filtro.filtra(mrRobots);
         System.out.println();
 
-        Filme truqueDeMestre = new Filme("Diretora Maria Rita");
-        truqueDeMestre.setNomeTitulo("TruqueDeMestre");
-        truqueDeMestre.setDataLancamento(1967);
+        Filme truqueDeMestre = new Filme("Truque de Mestre",2003, "Rtinha");
         truqueDeMestre.avalia(10);
         truqueDeMestre.avalia(10);
         truqueDeMestre.avalia(10);
@@ -40,7 +36,7 @@ public class MainTeste {
         System.out.println("trabalhando com ArrayList");
         ArrayList<Filme> listaFilmes = new ArrayList<>();
         listaFilmes.add(truqueDeMestre);
-        System.out.printf(listaFilmes.get(0).getNomeTitulo() + "\n");
+        System.out.println(listaFilmes.get(0).getNomeTitulo() + "\n");
         System.out.println(listaFilmes);
 
 
