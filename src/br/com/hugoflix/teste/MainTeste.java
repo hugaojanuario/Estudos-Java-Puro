@@ -34,6 +34,7 @@ public class MainTeste {
         epSerie.setSerie(mrRobots);
         epSerie.setTotalVisualizacoes(4000);
         epSerie.setNumero(34);
+
         filtro.filtra(epSerie);
 
         System.out.println("trabalhando com ArrayList");
