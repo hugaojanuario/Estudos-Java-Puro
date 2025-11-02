@@ -1,6 +1,6 @@
 package br.com.hugoflix.dominio;
 
-public class Titulo {
+public class Titulo implements Comparable<Titulo>{
     private String nomeTitulo;
     private int dataLancamento;
     private double avaliacao;
@@ -78,5 +78,10 @@ public class Titulo {
 
     public void setMediaAvaliacao() {
         this.mediaAvaliacao = mediaAvaliacao;
+    }
+
+    @Override
+    public int compareTo(Titulo outroTitulo) {
+        return getNomeTitulo().compareTo(outroTitulo.getNomeTitulo());
     }
 }
