@@ -8,6 +8,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.List;
 
 public class MainList {
     public static void main(String[] args) {
@@ -29,8 +30,7 @@ public class MainList {
 
         }
 
-
-        ArrayList<String> buscaPorArtistas = new ArrayList<>();
+        List<String> buscaPorArtistas = new ArrayList<>();
         buscaPorArtistas.add("Hugao");
         buscaPorArtistas.add("Ritinha");
         buscaPorArtistas.add("Ambrozio");
@@ -41,8 +41,6 @@ public class MainList {
         System.out.println("Lista de titulos ordenada: ");
         Collections.sort(listaTitulos);
         System.out.println(listaTitulos);
-
-
 
     }
 

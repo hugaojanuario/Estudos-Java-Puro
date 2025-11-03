@@ -11,13 +11,6 @@ public class Titulo implements Comparable<Titulo>{
         this.nomeTitulo = nomeTitulo;
         this.dataLancamento = dataLancamento;
     }
-//    public Titulo(String nomeTitulo, int dataLancamento) {
-//        this.nomeTitulo = nomeTitulo;
-//        this.dataLancamento = dataLancamento;
-//        this.avaliacao = avaliacao;
-//        this.totalAvaliacao = totalAvaliacao;
-//        this.mediaAvaliacao = mediaAvaliacao;
-//    }
 
     public void exibeDetalhesTitulo(){
         System.out.println("Nome: "+ this.nomeTitulo);
