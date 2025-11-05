@@ -1,9 +1,11 @@
 package ControleDeCC.models;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
-public class Menu implements Comparable<Menu>{
+public class Menu implements Comparable<Double>{
     Scanner scannerOpc = new Scanner (System.in);
     private int opc;
     private double limite;
@@ -11,33 +13,35 @@ public class Menu implements Comparable<Menu>{
     private double valorCompra;
 
     public void realizarCompra(){
+        System.out.println("digite o limite do cartao: ");
+        this.limite = scannerOpc.nextDouble();
         do {
-            System.out.println("digite o limite do cartao: ");
-            this.limite = scannerOpc.nextDouble();
+            double valorEstabelicido = this.limite;
             System.out.println("digite a descriçao da compra: ");
             this.descricaoCompra = scannerOpc.next();
             System.out.println("digite o valor da compra: ");
+
+
+
             this.valorCompra = scannerOpc.nextDouble();
             decontarValor();
             System.out.println("deseja continuar? 1 para continuar e 2 para sair");
             this.opc = scannerOpc.nextInt();
 
         }while (this.opc == 1);
-
+        ordenaCompras();
 
     }
 
     //analisar como armazenar os numeros passados em uma lista e ordenar essa lista de int
 
 
-    @Override
-    public int compareTo(Menu compras) {
-        return this.valorCompra.compareTo(compras.valorCompra);
-    }
 
     public void ordenaCompras(){
-        ArrayList<Menu> listaCompras = new ArrayList<>();
-        listaCompras.add(this.valorCompra);
+        List<Double> listaCompras = new ArrayList<>();
+        listaCompras.add(valorCompra);
+        Collections.sort(listaCompras);
+        System.out.println(listaCompras);
 
 
     }
@@ -73,5 +77,8 @@ public class Menu implements Comparable<Menu>{
     }
 
 
-
+    @Override
+    public int compareTo(Double o) {
+        return 0;
+    }
 }
