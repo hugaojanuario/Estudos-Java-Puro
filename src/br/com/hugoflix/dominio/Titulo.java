@@ -1,7 +1,11 @@
 package br.com.hugoflix.dominio;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Titulo implements Comparable<Titulo>{
+    @SerializedName("Title")
     private String nomeTitulo;
+    @SerializedName("Year")
     private int dataLancamento;
     private double avaliacao;
     private int totalAvaliacao;
@@ -76,5 +80,11 @@ public class Titulo implements Comparable<Titulo>{
     @Override
     public int compareTo(Titulo outroTitulo) {
         return getNomeTitulo().compareTo(outroTitulo.getNomeTitulo());
+    }
+
+    @Override
+    public String toString() {
+        return "Titulo: " + nomeTitulo +
+                ", dataLancamento: " + dataLancamento;
     }
 }
