@@ -1,7 +1,10 @@
 package br.com.hugoflix.teste;
 
+import br.com.hugoflix.api.TituloOmdb;
 import br.com.hugoflix.dominio.Titulo;
+import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.sun.net.httpserver.HttpServer;
 
 import java.io.IOException;
@@ -27,9 +30,14 @@ public class MainSearch {
         String json = response.body();
         System.out.println(json);
 
-        Gson gson = new Gson();
-        Titulo meuTitulo = gson.fromJson(json, Titulo.class);
+
+        Gson gson = new GsonBuilder()
+                .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
+                .create();
+        //Titulo meuTitulo = gson.fromJson(json, Titulo.class);
+        TituloOmdb meuTitulo = gson.fromJson(json, TituloOmdb.class);
         System.out.println(meuTitulo);
+
 
 
 

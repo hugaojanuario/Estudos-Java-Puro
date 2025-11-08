@@ -3,7 +3,6 @@ package br.com.hugoflix.dominio;
 import com.google.gson.annotations.SerializedName;
 
 public class Titulo implements Comparable<Titulo>{
-    @SerializedName("Title")
     private String nomeTitulo;
     @SerializedName("Year")
     private int dataLancamento;
