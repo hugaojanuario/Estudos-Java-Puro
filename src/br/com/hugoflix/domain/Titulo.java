@@ -1,11 +1,13 @@
-package br.com.hugoflix.dominio;
+package br.com.hugoflix.domain;
 
+import br.com.hugoflix.api.TituloOmdb;
 import com.google.gson.annotations.SerializedName;
 
 public class Titulo implements Comparable<Titulo>{
     private String nomeTitulo;
     @SerializedName("Year")
     private int dataLancamento;
+    private int duracaoMinutos;
     private double avaliacao;
     private int totalAvaliacao;
     private double mediaAvaliacao;
@@ -13,6 +15,12 @@ public class Titulo implements Comparable<Titulo>{
     public Titulo(String nomeTitulo, int dataLancamento) {
         this.nomeTitulo = nomeTitulo;
         this.dataLancamento = dataLancamento;
+    }
+
+    public Titulo(TituloOmdb meuTituloOmdb) {
+        this.nomeTitulo = meuTituloOmdb.title();
+        this.dataLancamento = Integer.valueOf(meuTituloOmdb.year());
+        this.duracaoMinutos = Integer.valueOf(meuTituloOmdb.runtime().substring(0,3));
     }
 
     public void exibeDetalhesTitulo(){
@@ -34,6 +42,13 @@ public class Titulo implements Comparable<Titulo>{
 
     }
 
+    public int getDuracaoMinutos() {
+        return duracaoMinutos;
+    }
+
+    public void setDuracaoMinutos(int duracaoMinutos) {
+        this.duracaoMinutos = duracaoMinutos;
+    }
 
     public String getNomeTitulo() {
         return nomeTitulo;
@@ -83,7 +98,8 @@ public class Titulo implements Comparable<Titulo>{
 
     @Override
     public String toString() {
-        return "Titulo: " + nomeTitulo +
-                ", dataLancamento: " + dataLancamento;
+        return "duracaoMinutos= " + duracaoMinutos +
+                " dataLancamento= " + dataLancamento +
+                " nomeTitulo= " + nomeTitulo;
     }
 }

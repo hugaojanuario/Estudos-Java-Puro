@@ -1,4 +1,4 @@
-package br.com.hugoflix.dominio;
+package br.com.hugoflix.domain;
 
 import br.com.hugoflix.calculos.Classificavel;
 

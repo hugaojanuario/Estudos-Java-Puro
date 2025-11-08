@@ -1,10 +1,9 @@
-package br.com.hugoflix.teste;
+package br.com.hugoflix.test;
 import br.com.hugoflix.calculos.Recomendacao;
-import br.com.hugoflix.dominio.Episodio;
-import br.com.hugoflix.dominio.Filme;
-import br.com.hugoflix.dominio.Serie;
+import br.com.hugoflix.domain.Episodio;
+import br.com.hugoflix.domain.Filme;
+import br.com.hugoflix.domain.Serie;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class MainTeste {

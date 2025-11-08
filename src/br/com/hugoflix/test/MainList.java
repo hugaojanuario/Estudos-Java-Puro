@@ -1,12 +1,10 @@
-package br.com.hugoflix.teste;
+package br.com.hugoflix.test;
 
-import br.com.hugoflix.dominio.Filme;
-import br.com.hugoflix.dominio.Serie;
-import br.com.hugoflix.dominio.Titulo;
+import br.com.hugoflix.domain.Filme;
+import br.com.hugoflix.domain.Serie;
+import br.com.hugoflix.domain.Titulo;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 

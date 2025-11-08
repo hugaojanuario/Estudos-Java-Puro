@@ -1,6 +1,4 @@
-package br.com.hugoflix.teste;
-
-import br.com.hugoflix.dominio.Titulo;
+package br.com.hugoflix.test;
 
 public class FIlmeTeste01 {
     public static void main(String[] args) {
