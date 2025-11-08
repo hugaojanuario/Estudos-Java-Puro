@@ -16,11 +16,15 @@ public class BuscaFilme {
     Scanner scanner = new Scanner (System.in);
     private String nomeFilme;
     private String endereco;
+    private String nomeSemEspaco;
+
+
 
     public void buscaFilme () throws IOException, InterruptedException{
         System.out.println("Informe o filme que deseja: ");
         this.nomeFilme = scanner.nextLine();
-        this.endereco = "https://www.omdbapi.com?t="+nomeFilme+"&apikey=e4702f78";
+        this.nomeSemEspaco = nomeFilme.replace(" ", "%20");
+        this.endereco = "https://www.omdbapi.com?t="+nomeSemEspaco+"&apikey=e4702f78";
 
         try {
             HttpClient client = HttpClient.newHttpClient();
@@ -53,10 +57,13 @@ public class BuscaFilme {
         System.out.println("encerrando com sucesso");
     }
 
+    public String getNomeSemEspaco() {
+        return nomeSemEspaco;
+    }
 
-
-
-
+    public void setNomeSemEspaco(String nomeSemEspaco) {
+        this.nomeSemEspaco = nomeSemEspaco;
+    }
 
     public String getNomeFilme() {
         return nomeFilme;
