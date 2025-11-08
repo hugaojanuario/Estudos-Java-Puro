@@ -1,5 +1,5 @@
 package br.com.hugoflix.test;
-import br.com.hugoflix.calculos.Recomendacao;
+import br.com.hugoflix.models.Recomendacao;
 import br.com.hugoflix.domain.Episodio;
 import br.com.hugoflix.domain.Filme;
 import br.com.hugoflix.domain.Serie;

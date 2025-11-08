@@ -18,8 +18,6 @@ public class BuscaFilme {
     private String endereco;
     private String nomeSemEspaco;
 
-
-
     public void buscaFilme () throws IOException, InterruptedException{
         System.out.println("Informe o filme que deseja: ");
         this.nomeFilme = scanner.nextLine();
@@ -37,7 +35,6 @@ public class BuscaFilme {
             String json = response.body();
             System.out.println(json);
 
-
             Gson gson = new GsonBuilder()
                     .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
                     .create();
@@ -53,6 +50,8 @@ public class BuscaFilme {
             }
         }catch (IllegalArgumentException e){
             System.out.println("erro na busca verifique o endereço");
+        }catch (ErroCompilacaoAnoException e){
+            System.out.println(e.getMensage());
         }
         System.out.println("encerrando com sucesso");
     }

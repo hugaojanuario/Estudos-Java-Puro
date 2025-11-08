@@ -1,4 +1,4 @@
-package br.com.hugoflix.calculos;
+package br.com.hugoflix.models;
 
 public class Recomendacao {
 

@@ -1,6 +1,6 @@
 package br.com.hugoflix.domain;
 
-import br.com.hugoflix.calculos.Classificavel;
+import br.com.hugoflix.models.Classificavel;
 
 public class Serie extends Titulo implements Classificavel {
     private int temporada;

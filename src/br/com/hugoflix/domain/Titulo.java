@@ -1,5 +1,6 @@
 package br.com.hugoflix.domain;
 
+import br.com.hugoflix.api.ErroCompilacaoAnoException;
 import br.com.hugoflix.api.TituloOmdb;
 import com.google.gson.annotations.SerializedName;
 
@@ -19,6 +20,10 @@ public class Titulo implements Comparable<Titulo>{
 
     public Titulo(TituloOmdb meuTituloOmdb) {
         this.nomeTitulo = meuTituloOmdb.title();
+
+        if (meuTituloOmdb.year().length() > 4){
+            throw new ErroCompilacaoAnoException("nao foi possivel compilar porque o ano tem mais que 4 caracteres");
+        }
         this.dataLancamento = Integer.valueOf(meuTituloOmdb.year());
         this.duracaoMinutos = Integer.valueOf(meuTituloOmdb.runtime().substring(0,3));
     }

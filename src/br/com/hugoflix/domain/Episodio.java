@@ -1,6 +1,6 @@
 package br.com.hugoflix.domain;
 
-import br.com.hugoflix.calculos.Classificavel;
+import br.com.hugoflix.models.Classificavel;
 
 public class Episodio implements Classificavel {
     private int numero;
