@@ -1,4 +1,4 @@
-package br.com.hugoflix.api;
+package br.com.hugoflix.exception;
 
 public class ErroCompilacaoAnoException extends RuntimeException {
     private String mensage;

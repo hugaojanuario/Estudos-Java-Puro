@@ -1,6 +1,6 @@
 package br.com.hugoflix.domain;
 
-import br.com.hugoflix.api.ErroCompilacaoAnoException;
+import br.com.hugoflix.exception.ErroCompilacaoAnoException;
 import br.com.hugoflix.api.TituloOmdb;
 import com.google.gson.annotations.SerializedName;
 
@@ -103,8 +103,8 @@ public class Titulo implements Comparable<Titulo>{
 
     @Override
     public String toString() {
-        return "duracaoMinutos= " + duracaoMinutos +
+        return "(duracaoMinutos= " + duracaoMinutos +
                 " dataLancamento= " + dataLancamento +
-                " nomeTitulo= " + nomeTitulo;
+                " nomeTitulo= " + nomeTitulo + ") \n";
     }
 }
